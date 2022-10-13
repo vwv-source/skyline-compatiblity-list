@@ -640,20 +640,7 @@ body{
         width: 80px;
         height: 80px;
     }
-}
 
-/* this is done as it's broken on firefox mobile  */
-
-@-moz-document url-prefix(){
-    @media (pointer:none), (pointer:coarse){
-        .gamestatus{
-            bottom: 75px;
-        }
-        .gamestatustitle{
-            bottom: 12px;
-        }
-    }   
-}
 
 @media only screen and (max-width: 400px) {
     .filtercontainer{
