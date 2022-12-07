@@ -67,9 +67,9 @@ function loadissues() {
     var responseObj = JSON.parse(this.responseText);
     listcontainer.innerHTML = "";
     if(!getCookie(playablenum)){
-        listcontainer.innerHTML += `<div class="percentagecontainer"> <div class="circlecontainer" ingamep=" "> <svg-progress-circle percent="31" textid="ingameper" color="rgba(83, 145, 68, 0.795)"></svg-progress-circle> <p class="percentagetitle" id="ingameper">In-Game</p> </div> <div class="circlecontainer" nothingp=" "> <svg-progress-circle percent="30" textid="nothingper" color="rgb(255, 70, 70)"></svg-progress-circle> <p class="percentagetitle" id="nothingper">Nothing</p> </div> <div class="circlecontainer" bootp=" "> <svg-progress-circle percent="22" textid="bootsper" color="rgb(214, 121, 0)"></svg-progress-circle> <p class="percentagetitle" id="bootsper">Boots</p> </div> <div class="circlecontainer" playp=" "> <svg-progress-circle percent="16"textid="playper" color="rgba(83, 255, 68, 1)"></svg-progress-circle> <p class="percentagetitle" id="playper">Playable</p> </div> </div>`
+        //listcontainer.innerHTML += `<div class="percentagecontainer"> <div class="circlecontainer" ingamep=" "> <svg-progress-circle percent="31" textid="ingameper" color="rgba(83, 145, 68, 0.795)"></svg-progress-circle> <p class="percentagetitle" id="ingameper">In-Game</p> </div> <div class="circlecontainer" nothingp=" "> <svg-progress-circle percent="30" textid="nothingper" color="rgb(255, 70, 70)"></svg-progress-circle> <p class="percentagetitle" id="nothingper">Nothing</p> </div> <div class="circlecontainer" bootp=" "> <svg-progress-circle percent="22" textid="bootsper" color="rgb(214, 121, 0)"></svg-progress-circle> <p class="percentagetitle" id="bootsper">Boots</p> </div> <div class="circlecontainer" playp=" "> <svg-progress-circle percent="16"textid="playper" color="rgba(83, 255, 68, 1)"></svg-progress-circle> <p class="percentagetitle" id="playper">Playable</p> </div> </div>`
     }else{
-        listcontainer.innerHTML += `<div class="percentagecontainer"> <div class="circlecontainer" ingamep=" "> <svg-progress-circle percent="${getCookie('ingameper')}" textid="ingameper" color="rgba(83, 145, 68, 0.795)"></svg-progress-circle> <p class="percentagetitle" id="ingameper">In-Game</p> </div> <div class="circlecontainer" nothingp=" "> <svg-progress-circle percent="${getCookie('nothingper')}" textid="nothingper" color="rgb(255, 70, 70)"></svg-progress-circle> <p class="percentagetitle" id="nothingper">Nothing</p> </div> <div class="circlecontainer" bootp=" "> <svg-progress-circle percent="${getCookie('bootsper')}" textid="bootsper" color="rgb(214, 121, 0)"></svg-progress-circle> <p class="percentagetitle" id="bootsper">Boots</p> </div> <div class="circlecontainer" playp=" "> <svg-progress-circle percent="${getCookie('playableper')}"textid="playper" color="rgba(83, 255, 68, 1)"></svg-progress-circle> <p class="percentagetitle" id="playper">Playable</p> </div> </div>`
+        //listcontainer.innerHTML += `<div class="percentagecontainer"> <div class="circlecontainer" ingamep=" "> <svg-progress-circle percent="${getCookie('ingameper')}" textid="ingameper" color="rgba(83, 145, 68, 0.795)"></svg-progress-circle> <p class="percentagetitle" id="ingameper">In-Game</p> </div> <div class="circlecontainer" nothingp=" "> <svg-progress-circle percent="${getCookie('nothingper')}" textid="nothingper" color="rgb(255, 70, 70)"></svg-progress-circle> <p class="percentagetitle" id="nothingper">Nothing</p> </div> <div class="circlecontainer" bootp=" "> <svg-progress-circle percent="${getCookie('bootsper')}" textid="bootsper" color="rgb(214, 121, 0)"></svg-progress-circle> <p class="percentagetitle" id="bootsper">Boots</p> </div> <div class="circlecontainer" playp=" "> <svg-progress-circle percent="${getCookie('playableper')}"textid="playper" color="rgba(83, 255, 68, 1)"></svg-progress-circle> <p class="percentagetitle" id="playper">Playable</p> </div> </div>`
     }
     responseObj.items.forEach(element => {
         i = 1;
@@ -232,40 +232,40 @@ searchbar.addEventListener('keyup', function(e){
     }
 })
 
-if(getCookie('playableper')){
+// if(getCookie('playableper')){
     
-}else{
-    setTimeout(() => {
-        var request = new XMLHttpRequest();
-        request.onload = percentagecalculator; 
-        request.open('get', `https://api.github.com/search/issues?q=label:status-ingame+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
-        request.send()
-    }, 1000)
-    setTimeout(() => {
-        var request = new XMLHttpRequest();
-        request.onload = percentagecalculator; 
-        request.open('get', `https://api.github.com/search/issues?q=label:status-nothing+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
-        request.send()
-    }, 2000);
-    setTimeout(() => {
-        var request = new XMLHttpRequest();
-        request.onload = percentagecalculator; 
-        request.open('get', `https://api.github.com/search/issues?q=label:status-playable+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
-        request.send()
-    }, 3000)
-    setTimeout(() => {
-        var request = new XMLHttpRequest();
-        request.onload = percentagecalculator; 
-        request.open('get', `https://api.github.com/search/issues?q=label:status-boots+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
-        request.send()
-    }, 5000)
-    setTimeout(() => {
-        var request = new XMLHttpRequest();
-        request.onload = percentagecalculator; 
-        request.open('get', `https://api.github.com/search/issues?q=state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
-        request.send()
-    }, 4000)
-}    
+// }else{
+//     setTimeout(() => {
+//         var request = new XMLHttpRequest();
+//         request.onload = percentagecalculator; 
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-ingame+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.send()
+//     }, 1000)
+//     setTimeout(() => {
+//         var request = new XMLHttpRequest();
+//         request.onload = percentagecalculator; 
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-nothing+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.send()
+//     }, 2000);
+//     setTimeout(() => {
+//         var request = new XMLHttpRequest();
+//         request.onload = percentagecalculator; 
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-playable+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.send()
+//     }, 3000)
+//     setTimeout(() => {
+//         var request = new XMLHttpRequest();
+//         request.onload = percentagecalculator; 
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-boots+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.send()
+//     }, 5000)
+//     setTimeout(() => {
+//         var request = new XMLHttpRequest();
+//         request.onload = percentagecalculator; 
+//         request.open('get', `https://api.github.com/search/issues?q=state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.send()
+//     }, 4000)
+// }    
 
 var request = new XMLHttpRequest();
 request.onload = loadissues; 
