@@ -1,0 +1,657 @@
+body{
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #080808;
+    overflow: hidden;
+}
+
+.maincontainer{
+    display: flex;
+}
+
+.skylinelogo{
+    top: 8px;
+    left: 10px;
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    z-index: 20;
+    position: absolute;
+    background-image: url('https://i.imgur.com/Ot2phft.png');
+}
+
+.webtitle{
+    color: white;
+    position: absolute;
+    top: -12px;
+    left: 80px;
+    font-size: 30px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.topbar{
+    background-color: #161616;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.507);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.searchbutton{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3031/3031293.png");
+    background-size: cover;
+    background-size: 30px 30px;
+    background-position: 8px 8px;
+    filter: invert(1);
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 47px;
+    width: 47px;
+    border-radius: 18px;
+    border: none;
+    background-color: #DBDBDB;
+/*     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.082); */
+}
+
+.searchbutton:hover{
+    cursor: pointer;
+}
+
+.searchbar:focus{
+    color: white;
+    background-color: #2e2e2e;
+    outline: none;
+}
+
+.searchbar:hover{
+    background-color: rgb(48, 48, 48);
+}
+
+.gamelistcontainer{
+    padding-top: 20px;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color-scheme: dark;
+    box-sizing: border-box;
+}
+
+.gamecontainer{
+    background-color: #1616163f;
+    height: 40px;
+    vertical-align: top;
+    display:inline-block;
+    transition: .2s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 6px;
+    border: 1px rgba(255, 255, 255, 0.192) solid;
+}
+
+.gamecontainer:hover{
+    transform: scale(1.05,1.05) translateX(-47%);
+    background-color: #252525;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+.gametitle{
+    font-size: 20px;
+    position: relative;
+    bottom: 15px;
+    left: 15px;
+    max-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    width: 300px;
+    float: left;
+    text-decoration: none;
+    margin-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.747);
+    transition: .2s;
+}
+
+.gametitle:hover{
+    color: white;
+}
+
+.gameinfocontainer{
+    position: absolute;
+    height: 50px;
+    left: 330px;
+}
+
+.extralabels{
+    width: 70%;
+    overflow: hidden;
+    height: 75px;
+    position: relative;
+    bottom: 55px;
+    margin-top: 20px;
+}
+
+.gamestatustitle{
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.extralabelstitle{
+    position: relative;
+    float: left;
+    left: 280px;
+    top: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.gamestatus {
+    float: left;
+    color: rgb(180, 240, 60);
+    background-color: rgba(21, 77, 14, 0.397);
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    width: 120px;
+    border: 2px rgba(153, 205, 50, 0.466) solid;
+    height: 16px;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    position: relative;
+    bottom: 10px;
+    left: 13px;
+}
+
+/* 
+.gamedate{
+    color: rgba(255, 255, 255, 0.596);
+    position: relative;
+    font-weight: 600;
+    bottom: 30px;
+    margin-left: 15px;
+} 
+
+.gameinfocontainer{
+    margin-top: 20px;
+    float: left;
+    width: 50%;
+    height: 20px;
+    position: relative;
+    left: 90px;
+    bottom: 55px;
+}
+
+.extralabels{
+    float: left;
+    width: 15%;
+    height: 75px;
+    position: relative;
+    bottom: 55px;
+    margin-top: 20px;
+}
+
+.gamestatustitle, .extralabelstitle{
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.extralabelstitle{
+    margin-left: 0;
+}
+
+.gamestatus {
+    color: rgb(180, 240, 60);
+    background-color: rgba(21, 77, 14, 0.397);
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    width: 120px;
+    border: 2px rgba(153, 205, 50, 0.466) solid;
+    height: 20px;
+    padding-top: 2px;
+    margin-left: 10px;
+    margin-top: -10px;
+} */
+
+#nothing{
+    color: rgb(179, 179, 179);
+    background-color: rgb(44, 44, 44);
+    border: 1px rgb(150, 150, 150) solid;
+}
+
+#status-ingame{
+    color: rgb(180, 240, 60);
+}
+
+#status-nothing{
+    color: rgb(255, 185, 173);
+    background-color: rgba(131, 42, 42, 0.349);
+    border: 1px rgba(255, 88, 88, 0.541) solid;
+}
+
+#status-boots{
+    color: rgba(255, 230, 0, 0.904);
+    background-color: rgba(98, 99, 17, 0.445);
+    border: 1px rgba(255, 210, 88, 0.616) solid;
+}
+
+[id="32-bit"]{
+    color: rgba(255, 230, 0, 0.904);
+    background-color: rgba(236, 240, 25, 0.445);
+    border: 1px rgba(255, 210, 88, 0.616) solid;
+}
+
+#audio{
+    color: #c1a1ee;
+    background-color: #382e46;
+    border: 1px #7d679c solid;
+}
+
+#nvdec{
+    color: #c4b4c9;
+    background-color: #302b31;
+    border: 1px #746b77 solid;
+}
+
+#gpu{
+    color: #50add4;
+    background-color: #112831;
+    border: 1px #2b6077 solid;
+}
+
+#kernel{
+    color: #bbcfe6;
+    background-color: #2e3338;
+    border: 1px #8795a5 solid;
+}
+
+#vfs{
+    color: #baa7f8;
+    background-color: #292538;
+    border: 1px #7b6da7 solid;
+}
+
+#opengl{
+    color: #bbcfe6;
+    background-color: #2e3338;
+    border: 1px #8795a5 solid;
+}
+
+#guest-crash{
+    color: #ded4ff;
+    background-color: #292538;
+    border: 1px #7b6da7 solid;
+}
+
+.labels {
+    background-color: rgba(21, 77, 14, 0.397);
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    width: 110px;
+    border: 1px rgba(153, 205, 50, 0.466) solid;
+    height: 20px;
+    padding-top: 2px;
+    margin-left: 10px;
+    top: 25px;
+    position: relative;
+    left: 285px;
+    user-select: none;
+}
+
+.searchbar{
+    font-size: 20px;
+    padding-left: 15px;
+    color: white;
+    position: absolute;
+    border-radius: 18px;
+    height: 45px;
+    width: 900px;
+    background-color: #242424;
+    top: 15px;
+    right: 70px;
+    border: none;
+    /* border: 2px solid rgba(255, 255, 255, 0.301); */
+    transition: .2s;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+.filtercontainer{
+    position: absolute;
+    top: 15px;
+    right: 70px;
+    z-index: 10;
+}
+
+.filterbutton{
+    display:none;
+    background-color: #313131;
+    color: gray;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.082);
+    width: 70px;
+    text-align: center;
+    height: 47px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Segoe UI', sans-serif;
+    border: 1px rgba(255, 255, 255, 0.062) solid;
+}
+
+.filterbutton[selected=" "], .filterbutton:hover{
+    background-color: #3b3b3b;
+    color:white;
+}
+
+#ingame{
+    color: rgb(180, 240, 60);
+}
+
+#regression{
+    color: rgb(255, 208, 146);
+    background-color: rgba(131, 85, 55, 0.507);
+    border: 1px rgba(255, 104, 4, 0.63) solid;
+}
+
+#services{
+    color: rgb(255, 185, 173);
+    background-color: rgba(131, 42, 42, 0.432);
+    border: 1px rgba(255, 88, 88, 0.562) solid;
+}
+
+.percentagecontainer{
+    background-color: transparent;
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 10px;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%);
+}
+
+.percentagetitle{
+    position: relative;
+    top: -10px;
+    left: 0px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.percentagetext{
+    color: #d69797;
+    font-size: 18px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.circlecontainer{
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+[playptext=" "], #playper{
+    color: rgb(106, 185, 86);
+    fill: rgb(106, 185, 86);
+}
+
+[nothingptext=" "], #nothingper{
+    color: rgb(255, 139, 139);
+    fill: rgb(255, 139, 139);
+}
+
+[bootptext=" "], #bootsper{
+    color: rgb(214, 121, 0);
+    fill: rgb(214, 121, 0);
+}
+
+[ingameptext=" "], #ingameper{
+    color: rgba(83, 145, 68, 0.795);
+    fill: rgba(83, 145, 68, 0.795);
+}
+
+.webtitlecontainer{
+/*     background-color: rgb(39, 37, 37); */
+    width: 250px;
+    position: absolute;
+    float: left;
+    top: 8px;
+    left: 80px;
+    height: 60px;
+}
+
+.toptitle{
+    position: absolute;
+    bottom: 3px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bottomtitle{
+    color: rgba(255, 255, 255, 0.616);
+    position: absolute;
+    bottom: 7px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1400px) {
+    .searchbar{
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .webtitle{
+        top: 10px;
+        font-size: 18px;
+    }
+    .searchbar{
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .webtitle{
+        display: none;
+    }
+    .filterbutton{
+        background-color: rgb(34, 34, 34);
+    }
+/*     .gamelistcontainer{
+        left: 50%;
+        transform: translateX(-50%);
+        padding-left: 5%;
+        height: 90%;
+        width: 90%;
+    } */
+}
+
+@media only screen and (max-width: 1100px) {
+    .gamelistcontainer{
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 82%;
+/*         width: 80%; */
+    }
+    .searchbar{
+        width: 600px;
+    }
+    .webtitlecontainer{
+        display: none;
+    }
+/*     .gamecontainer{
+        width: 45%;s
+    } */
+/*     .gamecontainer:hover{
+        transform: scale(1,1);
+    } */
+    .filtercontainer{
+        top: 70px;
+        left: 50%;
+        right: 0;
+        transform: translateX(-46%);
+        width: 90%;
+    }
+    .filterbutton{
+        display: unset;
+        width: 18%;
+    }
+    .topbar{
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .webtitle{
+        display: none;
+    }
+    .skylinelogo{
+        display: none;
+    }
+    .searchbar{
+        width: 80vw;
+        box-sizing: border-box;
+    }
+/*     .gamelistcontainer{
+        padding: 0;
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+        height: 90%;
+        top: 140px;
+    } */
+    .topbar{
+        height: 130px;
+    }
+    .extralabels{
+        display: none;
+    }
+    .gameinfocontainer{
+        width: 40%;
+        margin-left: 5px;
+    }
+    .extralabels{
+        width: 40%;
+        margin-left: 12%;
+    }
+    .filtercontainer{
+        top: 70px;
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
+        width: 380px;
+    }
+    .filterbutton{
+        background-color: rgb(34, 34, 34);
+        width: 18%;
+    }
+    .gamestatus{
+        width: 140px;
+    }
+    .labels{
+        width: 110px;
+    }
+
+    .covercircle{
+        width: 60px;
+        height: 60px;
+    }
+    .percentagetext{
+        top: 0px;
+    }
+    .gamestatustitle{
+        float: left;
+    }
+
+}
+
+@media only screen and (max-width: 500px) { 
+    .gameinfocontainer{
+        position: relative;
+        bottom: 25px;
+        left: -5px;
+    }
+    .gamecontainer{
+        width: 95%;
+    }
+    .gamecontainer:hover{
+        background-color: unset;
+        transform: translateX(-50%);
+    }
+    .gamestatus{
+        position: relative;
+        display: block;
+        width: 100px;
+        bottom: 60px;
+        left: 80px;
+    }
+    .gametitle{
+        top: -10px;
+        width: 80%;
+    }
+    .gamecontainer{
+        height: 90px;
+    }
+    .percentagecontainer{
+        top: 15px;
+        left: 50%;
+        transform: translateX(-33%);
+    }
+    .circlecontainer{
+        margin: 0;
+        margin-top: 10px;
+        margin-right: 1%;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .filtercontainer{
+        left: 20px;
+        transform: translateX(0px);
+    }
+    .filterbutton{
+        font-size: 12px;
+        width: 60px;
+    }
+    .searchbar{
+        width: 78%;
+    }
+}

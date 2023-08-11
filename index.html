@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/Ot2phft.png">
+    <title>Skyline Compatibility List</title>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="topbar">
+            <div class="skylinelogo"></div>
+            <div class="webtitlecontainer">
+                <p class="toptitle">Skyline</p>
+                <a class="bottomtitle" href="https://github.com/vwv-source/skyline-compatiblity-list" target="_blank">Compatiblity List</a>
+            </div>
+            <div class="filtercontainer">
+                <input type="button" value="All" class="filterbutton" id="fall">
+                <input type="button" value="Playable" class="filterbutton" id="fplayable">
+                <input type="button" value="In-game" class="filterbutton" id="fingame">
+                <input type="button" value="Boots" class="filterbutton" id="fboots">
+                <input type="button" value="Nothing" class="filterbutton" id="fnothing">
+            </div>
+            <input type="text" class="searchbar" placeholder="Search for games here!">
+            <input type="button" value="" class="searchbutton">
+        </div>
+        <div class="gamelistcontainer">
+            <!-- <div class="percentagecontainer">
+                <div class="circlecontainer" ingamep=" ">
+                    <svg-progress-circle percent="75" textid="ingameper" color="rgba(83, 145, 68, 0.795)"></svg-progress-circle>
+                    <p class="percentagetitle" id="ingameper">In-Game</p>
+                </div>
+                <div class="circlecontainer" nothingp=" ">
+                    <svg-progress-circle percent="75" textid="nothingper" color="rgb(255, 139, 139)"></svg-progress-circle>
+                    <p class="percentagetitle" id="nothingper">Nothing</p>
+                </div>
+                <div class="circlecontainer" bootp=" ">
+                    <svg-progress-circle percent="75" textid="bootsper" color="rgb(214, 121, 0)"></svg-progress-circle>
+                    <p class="percentagetitle" id="bootsper">Boots</p>
+                </div>
+                <div class="circlecontainer" playp=" ">
+                    <svg-progress-circle percent="75"textid="playper" color="rgba(83, 255, 68, 1)"></svg-progress-circle>
+                    <p class="percentagetitle" id="playper">Playable</p>
+                </div>
+            </div> -->
+            <!-- <div class="gamecontainer">
+                <a class="gametitle" href="https://github.com/skyline-emu/skyline-games-list/issues" target="_blank">PC Building Simulator</a>
+                <div class="gameinfocontainer">
+                    <p class="gamestatustitle">Status:</p>
+                    <p class="gamestatus" id="ingame">status-ingame</p>
+                </div>
+                <div class="extralabels">
+                    <p class="extralabelstitle">Labels:</p>
+                    <p class="labels" id="regression">regression</p>
+                    <p class="labels" id="services">services</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="JS/main.js"></script>
+<script>
+    customElements.define("svg-progress-circle", class extends HTMLElement {
+      connectedCallback() {
+        let d = 'M5,30a25,25 0 1,1 50,0a25,25 0 1,1 -50,0'; // circle
+        this.innerHTML = `
+        <svg viewBox="0 0 60 60">
+    <path stroke-dasharray="0" stroke="#1d1d1d"   stroke-dashoffset="0" 
+          pathlength="120" d="${d}" fill="none" stroke-width="5"/>
+    <path stroke-dasharray="30 70" stroke-dashoffset="-25" 
+          pathlength="100" d="${d}" fill="none" 
+          stroke="${this.getAttribute("color")||"red"}" stroke-width="5"/>
+    <text x="50%" y="60%" id="${this.getAttribute('textid')}" text-anchor="middle">30%</text></svg></span>`;
+        this.percent = this.getAttribute("percent");
+      }
+      set percent(val = 0) {
+/*         this.setAttribute("percent", val); */
+        let dash = val + " " + (100 - val);
+        this.querySelector("path+path").setAttribute('stroke-dasharray', dash);
+        this.querySelector("text").innerHTML = val + "%";
+/*         this.querySelector("input").value = val; */
+      }
+    })
+  </script>
+</html>
