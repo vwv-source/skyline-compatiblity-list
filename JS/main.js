@@ -95,7 +95,7 @@ function loadissues() {
 searchok.addEventListener('click', function(e){
         var request = new XMLHttpRequest();
         request.onload = loadissues; 
-        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
         request.send()
 })
 
@@ -105,7 +105,7 @@ fplayable.addEventListener('click', function(e){
         currentfilter = "";
             var request = new XMLHttpRequest();
             request.onload = loadissues; 
-            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
             request.send()      
         
         return
@@ -118,7 +118,7 @@ fplayable.addEventListener('click', function(e){
     this.setAttribute('selected', " ")
         var request = new XMLHttpRequest();
         request.onload = loadissues; 
-        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
         request.send()      
 })
 
@@ -128,7 +128,7 @@ fboots.addEventListener('click', function(e){
         currentfilter = "";
             var request = new XMLHttpRequest();
             request.onload = loadissues; 
-            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
             request.send()      
         return
     }
@@ -139,7 +139,7 @@ fboots.addEventListener('click', function(e){
     this.setAttribute('selected', " ")
         var request = new XMLHttpRequest();
         request.onload = loadissues; 
-        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
         request.send()      
 })
 
@@ -151,7 +151,7 @@ fall.addEventListener('click', function(e){
     })
     var request = new XMLHttpRequest();
     request.onload = loadissues; 
-    request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+    request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
     request.send()      
 })
 
@@ -161,7 +161,7 @@ fingame.addEventListener('click', function(e){
         currentfilter = "";
             var request = new XMLHttpRequest();
             request.onload = loadissues; 
-            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
             request.send()      
         return
     }
@@ -172,7 +172,7 @@ fingame.addEventListener('click', function(e){
     this.setAttribute('selected', " ")
         var request = new XMLHttpRequest();
         request.onload = loadissues; 
-        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
         request.send()      
 })
 
@@ -182,7 +182,7 @@ fnothing.addEventListener('click', function(e){
         currentfilter = "";
             var request = new XMLHttpRequest();
             request.onload = loadissues; 
-            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
             request.send()      
         return
     }
@@ -193,7 +193,7 @@ fnothing.addEventListener('click', function(e){
     this.setAttribute('selected', " ")
         var request = new XMLHttpRequest();
         request.onload = loadissues; 
-        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+        request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
         request.send()
 })
 
@@ -227,7 +227,7 @@ searchbar.addEventListener('keyup', function(e){
     if (e.key === 'Enter' || e.keyCode === 13) {
             var request = new XMLHttpRequest();
             request.onload = loadissues; 
-            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+            request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}${currentfilter}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
             request.send()      
     }
 })
@@ -238,38 +238,38 @@ searchbar.addEventListener('keyup', function(e){
 //     setTimeout(() => {
 //         var request = new XMLHttpRequest();
 //         request.onload = percentagecalculator; 
-//         request.open('get', `https://api.github.com/search/issues?q=label:status-ingame+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-ingame+state:open+in:title+repo:strato-emu/compat-list&per_page=0`, true)
 //         request.send()
 //     }, 1000)
 //     setTimeout(() => {
 //         var request = new XMLHttpRequest();
 //         request.onload = percentagecalculator; 
-//         request.open('get', `https://api.github.com/search/issues?q=label:status-nothing+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-nothing+state:open+in:title+repo:strato-emu/compat-list&per_page=0`, true)
 //         request.send()
 //     }, 2000);
 //     setTimeout(() => {
 //         var request = new XMLHttpRequest();
 //         request.onload = percentagecalculator; 
-//         request.open('get', `https://api.github.com/search/issues?q=label:status-playable+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-playable+state:open+in:title+repo:strato-emu/compat-list&per_page=0`, true)
 //         request.send()
 //     }, 3000)
 //     setTimeout(() => {
 //         var request = new XMLHttpRequest();
 //         request.onload = percentagecalculator; 
-//         request.open('get', `https://api.github.com/search/issues?q=label:status-boots+state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.open('get', `https://api.github.com/search/issues?q=label:status-boots+state:open+in:title+repo:strato-emu/compat-list&per_page=0`, true)
 //         request.send()
 //     }, 5000)
 //     setTimeout(() => {
 //         var request = new XMLHttpRequest();
 //         request.onload = percentagecalculator; 
-//         request.open('get', `https://api.github.com/search/issues?q=state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=0`, true)
+//         request.open('get', `https://api.github.com/search/issues?q=state:open+in:title+repo:strato-emu/compat-list&per_page=0`, true)
 //         request.send()
 //     }, 4000)
 // }    
 
 var request = new XMLHttpRequest();
 request.onload = loadissues; 
-request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}state:open+in:title+repo:skyline-emu/skyline-games-list&per_page=100`, true)
+request.open('get', `https://api.github.com/search/issues?q=${searchbar.value.split(' ').join('+')}state:open+in:title+repo:strato-emu/compat-list&per_page=100`, true)
 request.send()
 
 function getCookie(name) {
